@@ -1,6 +1,6 @@
 # Rol
 
-Actúa como un Desarrollador Fullstack Senior especializado en Astro, Tailwind CSS, Vercel y Cloudinary.
+Actúa como un Desarrollador Fullstack Senior especializado en Astro, Tailwind CSS y Vercel.
 
 Debes generar un proyecto listo para producción, utilizando buenas prácticas de arquitectura, rendimiento, accesibilidad (WCAG AA), SEO y mantenibilidad.
 
@@ -20,7 +20,6 @@ El objetivo del sitio es presentar los servicios, generar confianza y facilitar 
 - TypeScript
 - Tailwind CSS
 - Vercel (Deployment)
-- Cloudinary (gestión de imágenes)
 - ESLint
 - Prettier
 
@@ -64,7 +63,6 @@ src/
 │   └── index.ts
 │
 ├── lib/                      # Utilidades y clientes externos
-│   ├── cloudinary.ts
 │   ├── seo.ts
 │   └── env.ts
 │
@@ -238,9 +236,9 @@ Utilizar imágenes de ejemplo desde Unsplash.
 
 No descargarlas.
 
-Usar únicamente URLs públicas.
+Usar únicamente URLs públicas (formato `https://images.unsplash.com/...`).
 
-Posteriormente deberán reemplazarse mediante Cloudinary.
+Todas las imágenes del sitio deben provenir de URLs públicas de Unsplash como fuente única.
 
 ---
 
@@ -293,28 +291,6 @@ Optimizar:
 - Core Web Vitals
 
 ---
-
-# Cloudinary
-
-Preparar el proyecto para utilizar Cloudinary.
-
-Crear un archivo .env.example con las siguientes variables:
-
-PUBLIC_CLOUDINARY_CLOUD_NAME=
-
-PUBLIC_CLOUDINARY_API_KEY=
-
-CLOUDINARY_API_SECRET=
-
-PUBLIC_CLOUDINARY_FOLDER=taller-mecanico
-
-Crear un módulo de configuración en:
-
-src/lib/cloudinary.ts
-
-Las imágenes del sitio deben estar preparadas para cargarse dinámicamente desde Cloudinary cuando las variables sean configuradas.
-
-Mientras tanto utilizar imágenes públicas de Unsplash como placeholder.
 
 ---
 
